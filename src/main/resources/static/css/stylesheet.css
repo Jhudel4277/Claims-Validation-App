@@ -1,0 +1,564 @@
+
+body{
+    background-color: #F2F2F2;
+}
+
+/*LOGIN PAGE*/
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .form p{
+      font-size: 16px;
+      padding:10px
+  }
+  .form button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #FF0000;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .form button:hover,.form button:active,.form button:focus {
+    background-color: transparent;
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    font-weight: bold;
+  }
+
+/* NAVBAR*/
+
+.navbar{
+    display:flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 2;
+    padding-left: 6rem;
+
+}
+
+.profile{
+    display:flex;
+    width: 32%;
+    max-width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-image{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-name{
+    font-size: 0.9rem;
+    margin-left: -20px;
+    font-weight: bold;
+}
+
+.logoutbtn{
+    border:none;
+    padding-right:10px;
+    height:50px;
+    width:100px;
+    background-color: transparent;
+}
+
+.logo{
+    max-width: 150px;
+    max-height: 50px;   
+    object-fit: cover;
+    margin-left: -3%;
+    margin-top: 0;
+}
+
+.side-toggle{
+    position: fixed;
+    z-index: 2;
+    top: 20;
+    left: 25;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#sidebartoggle{
+    display: none;
+}
+
+/*SIDEBAR*/
+
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 230px;
+    left: 0;
+    top: 0;
+    padding: 88px 0 20px 0;
+    color: #000;;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("alliance-logo.png");
+
+}
+
+.sidebar-menu{
+    display: flex;
+    align-items:center;
+    padding: 15px 15px;
+    width: 230px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.sidebar-menu > span {
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.sidebar-menu > a {
+    text-decoration-line: none;
+    color:#000;
+    
+}
+
+.sidebar-menu:hover{
+    color:#000;
+    background-color: rgba(242, 242, 242, 0.5);
+    width:100%;
+}
+
+#sidebartoggle:checked ~ .sidebar{
+    width: 50px;
+}
+
+#sidebartoggle:checked ~ .sidebar .sidebar-menu > a{
+    display: none;
+}
+
+#sidebartoggle:checked ~ .sidebar .sidebar-menu:hover{
+    display:list-item;
+    width: 50px;
+}
+
+#sidebartoggle:checked ~ main{
+    padding: 6rem 2rem 2rem 6rem;
+}
+
+/*Main*/
+
+main{
+    min-height: 100%;
+    padding: 6rem 1rem 2rem 16rem;
+    color: #000;
+}
+
+main > h2{
+    padding: 0px 20px 20px 0px;
+    font-size: 20px;    
+}
+
+/*tagging claims as done*/
+.claim-status-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 60px;
+    height: 28px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    transition: background-color ease 0.3s;
+  }
+  
+  .claim-status-toggle:before {
+    content: "Done";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 23px;
+    height: 23px;
+    background: #fff;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    font: 10px/28px Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-indent: -34px;
+    word-spacing: 30px;
+    color: #fff;
+    text-shadow: -1px -1px rgba(0,0,0,0.15);
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+  }
+  
+  .claim-status-toggle:checked {
+    background-color: rgb(13, 202, 13);
+  }
+  
+  .claim-status-toggle:checked:before {
+    left: 36px;
+  }
+
+  /*Date*/
+
+  .date{
+      border: none;
+      background-color: transparent;
+      border-bottom:#f2f2f2 solid 1px;
+      width:75%;
+      font-weight: bold;
+  }
+
+/*List Container*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas: 
+        "users-box users-box "
+}
+
+.card{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5    px;
+}
+
+.box{
+    grid-area: users-box;
+    color: #000;
+    font-weight: bold;
+    overflow: auto;
+    padding:0px;
+    align-items: center;
+    max-width: 150%;
+}
+
+.list-container{
+    display: flex;
+    align-items: center;
+}
+
+.list-card{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    overflow: visible;
+}
+
+
+/*TOOGLE TABS*/
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: auto;
+  }
+  
+  .tabs__label {
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+  
+  .tabs__radio {
+    display: none;
+  }
+  
+  .tabs__content {
+    order: 1;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 0.9em;
+    display: none;
+    padding: 20px;
+  }
+  
+  .tabs__radio:checked + .tabs__label {
+    font-weight: bold;
+    color: #FF0000;
+    border-top: 3px solid #FF0000;
+  }
+  
+  .tabs__radio:checked + .tabs__label + .tabs__content {
+    display: initial;
+  }
+  
+
+/*Table & search user*/
+#myInput {
+    border: none;
+    width: 30%;
+    flex:right;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 12px;
+} 
+
+.table-info table{
+    width:100%;
+    border-collapse: collapse;
+    grid-area: detail;
+    color: #000;
+    font-weight: bold;
+    overflow: auto;
+
+}
+
+.table-card{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5    px;
+}
+
+
+.detail{
+    grid-area: detail;
+    color: #000;
+    font-weight: bold;
+    overflow: auto;
+}
+
+.detail table{
+    width:auto;
+    border-collapse: collapse;
+}
+
+.detail table tr:nth-child(odd){
+    background-color: #F2F2F2;
+}
+
+.detail table th{
+    background-color: #F2F2F2;
+}
+
+.detail table th, 
+.detail table td {
+    padding: 0.8rem 0.2rem;
+    text-align:center;
+    min-width: 145px;
+    font-size: 14px;
+}
+
+.detail table tr:hover{
+    background-color: #F2F2F2;
+    border-bottom: 2px solid #FA6F6F;
+}
+
+.detail-header{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-header button{
+    height: 30px;
+    width: 120px;
+    border: 1px solid #FF0000;
+    background-color: #FF0000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-weight: bold;
+
+}
+
+.detail-header button:hover{
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+}
+
+.addbtn{
+    height: 30px;
+    width: 120px;
+    border: 1px solid #FF0000;
+    background-color: #FF0000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-weight: bold;
+    float:right;
+
+}
+
+.addbtn:hover{
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+}
+
+
+/*VIEW PROFILE PAGE*/
+.profile-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas: 
+        "profilebox1 profilebox2 "
+}
+
+.profilebox1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: 0px 10px 10px 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    border-top: 3px solid #FF0000 ;  
+    font-size: 14px;
+    height: 400px;
+}
+
+.admin-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.admin-info{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+
+.admin-email > p{
+    padding: 20px;
+    border-top: 1px solid grey;
+    border-width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.admin-info > a{
+    font-size: 16px;
+    color:#000;
+}
+
+
+.profilebox2{
+    grid-area: profilebox2;
+    color: #000;
+    font-weight: bold;
+    overflow: auto;
+    padding:0px;
+}
+
+/*EDIT PROFILE*/
+
+.edit-profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.edit-profile-card {
+    width: 100%;
+    height: 470px;
+    background-color: #fff;
+    overflow: visible;
+}
+
+.edit-profile-card .edit-profile-info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1dede;
+    overflow: visible;
+}
+
+.edit-profile-card .edit-profile-info button {
+    height: 30px;
+    width: 100px;
+    border: 1px solid #FF0000;
+    background-color: #FF0000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-weight: light;
+}
+
+.edit-profile-card .edit-product-info button:hover{
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+}
+
+.edit-profile-card .forms {
+    padding: 15px
+}
+
+.edit-profile-card .inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+
+.edit-profile-card .inputs span {
+    font-size: 12px
+}
+
+.edit-profile-card .inputs input {
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 17px;
+    box-shadow: none;
+    outline: none
+}
+
+.edit-profile-card .inputs input[type="text"][readonly] {
+    border: 2px solid rgba(0, 0, 0, 0)
+}

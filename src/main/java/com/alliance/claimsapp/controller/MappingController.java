@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class MappingController {
 
-    @GetMapping("register")
-    public String registerPage(){
-        return "registration";
+    @GetMapping("admin-profile")
+    public String adminPage(){
+        return "adminProfile";
     }
-
 }
 

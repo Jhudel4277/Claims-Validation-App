@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--style-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <title>Employee</title>
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar">
+    <img class="logo" src="C:\Users\dimpy\OneDrive\Desktop\Alliance\claims\Alliance_logo.jpg">
+    <div class="profile">
+        <img class="profile-image" src="">
+        <p class="profile-name">Admin</p>
+        <button id="logout" class="logoutbtn"><span class="fas fa-sign-out-alt"></span></button>
+    </div>
+</nav>
+<!--Sidebar-->
+<input type="checkbox" id="sidebartoggle">
+<label class="side-toggle" for="sidebartoggle">
+        <span class="fas fa-bars"><span>
+</label>
+
+<div class="sidebar" style="background-image: url('sidebarbg.png');">
+    <div class="sidebar-menu">
+        <span class="fas fa-home"></span><a href="claimslist.html">Claims List</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class="fas fa-user"></span><a href="employeelist.html">Employee List</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class="fas fa-bell"></span><a href="adminprofile.html">Admin Profile</a>
+    </div>
+</div>
+
+<!--Main-->
+<main>
+    <h2>Employee Profile</h2>
+    <div class="profile-container">
+        <!--card 1-->
+        <div class="card profilebox1">
+            <img src="C:\Users\dimpy\OneDrive\Desktop\Wearly\images\dimple.jpg" alt="Master" class="admin-image">
+            <div class="admin-info">
+                <h2>Dimple Gabunada</h2>
+                <a>Technical</a>
+            </div>
+            <div class="admin-email">
+                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </p>
+            </div>
+        </div>
+        <!--card 2-->
+        <div class="card profilebox2">
+            <div class="tabs">
+                <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+                <label for="tab1" class="tabs__label">User Info</label>
+                <div class="tabs__content">
+                    <div class="edit-profile-container">
+                        <div class="edit-profile-card">
+                            <div class="edit-profile-info"> <span>Personal Details</span> <button id="savebutton">EDIT</button> </div>
+                            <div class="forms">
+                                <div class="inputs"> <span>First Name</span> <input type="text" readonly value="Dimple"> </div>
+                                <div class="inputs"> <span>Last Name</span> <input type="text" readonly value="Gabunada"> </div>
+                                <div class="inputs"> <span>Email</span> <input type="text" readonly value="dimple.g@gmail.com"> </div>
+                                <div class="inputs"> <span>UserName</span> <input type="text" readonly value="dimpy0703"> </div>
+                                <div class="inputs"> <span>Country</span> <input type="text" readonly value="Philippines"> </div>
+                            </div>
+                            <div class="edit-profile-info"> <button id="delete">DELETE <span class="fas fa-trash"></span></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+</body>
+
+<script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+var savebutton = document.getElementById('savebutton');
+var readonly = true;
+var inputs = document.querySelectorAll('input[type="text"]');
+savebutton.addEventListener('click',function(){
+
+for (var i=0; i<inputs.length; i++) { inputs[i].toggleAttribute('readonly'); }; if (savebutton.innerHTML=="EDIT" ) { savebutton.innerHTML="SAVE" ; } else { savebutton.innerHTML="EDIT" ; } });
+</script>

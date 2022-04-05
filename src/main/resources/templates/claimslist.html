@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--style-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <title>Claims List</title>
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar">
+    <img class="logo" src="C:\Users\dimpy\OneDrive\Desktop\Alliance\claims\Alliance_logo.jpg">
+    <div class="profile">
+        <img class="profile-image" src="images/admin.png">
+        <p class="profile-name">Admin</p>
+        <button id="logout" class="logoutbtn"><span class="fas fa-sign-out-alt"></span></button>
+    </div>
+</nav>
+<!--Sidebar-->
+<input type="checkbox" id="sidebartoggle">
+<label class="side-toggle" for="sidebartoggle">
+        <span class="fas fa-bars"><span>
+</label>
+
+<div class="sidebar" style="background-image: url('sidebarbg.png');">
+    <div class="sidebar-menu">
+        <span class="fas fa-home"></span><a href="claimslist.html">Claims List</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class="fas fa-user"></span><a href="employeelist.html">Employee List</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class="fas fa-bell"></span><a href="adminprofile.html">Admin Profile</a>
+    </div>
+</div>
+<!--Main-->
+<main>
+    <h2>Claim List</h2>
+    <div class="container">
+        <!--2 cards-->
+        <div class="card box">
+            <div class="tabs">
+                <input type="radio" class="tabs__radio" name="tabs-example" id="claim-tab1" checked>
+                <label for="claim-tab1" class="tabs__label">All Claims</label>
+                <div class="tabs__content">
+                    <div class="list-container">
+                        <div class="list-card">
+                            <input id="myInput" type="search" class="light-table-filter" data-table="table-info" placeholder="Filter/Search"><span class="fas fa-search"></span>
+                            <div class="table-card detail">
+                                <div class="detail-header">
+                                    <table class="table-info table">
+                                        <tr>
+                                            <th>Billing Date</th>
+                                            <th>Transaction No.</th>
+                                            <th>Name</th>
+                                            <th>Invoice</th>
+                                            <th>Company</th>
+                                            <th>Net Amt</th>
+                                            <th>Commission</th>
+                                            <th>Release Date</th>
+                                            <th>Collection Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        <tr>
+                                            <td>4/1/2022</td>
+                                            <td>8000102005</td>
+                                            <td>Jane Doe</td>
+                                            <td>#10001</td>
+                                            <td>Alliance Inc.</td>
+                                            <td>30003</td>
+                                            <td>20%</td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="claim-status-toggle" type="checkbox" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4/1/2022</td>
+                                            <td>8000102005</td>
+                                            <td>Jane Doe</td>
+                                            <td>#10001</td>
+                                            <td>Alliance Inc.</td>
+                                            <td>30003</td>
+                                            <td>20%</td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="claim-status-toggle" type="checkbox" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4/1/2022</td>
+                                            <td>8000102005</td>
+                                            <td>Jane Doe</td>
+                                            <td>#10001</td>
+                                            <td>Alliance Inc.</td>
+                                            <td>30003</td>
+                                            <td>20%</td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="claim-status-toggle" type="checkbox" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="radio" class="tabs__radio" name="tabs-example" id="claim-tab2" checked>
+                <label for="claim-tab2" class="tabs__label">Recent Claims</label>
+                <div class="tabs__content">
+                    <div class="list-container">
+                        <div class="list-card">
+                            <input id="myInput" type="search" class="light-table-filter" data-table="table-info" placeholder="Filter/Search"><span class="fas fa-search"></span>
+                            <div class="table-card detail">
+                                <div class="detail-header">
+                                    <table class="table-info table">
+                                        <tr>
+                                            <th>Billing Date</th>
+                                            <th>Transaction No.</th>
+                                            <th>Name</th>
+                                            <th>Invoice</th>
+                                            <th>Company</th>
+                                            <th>Net Amt</th>
+                                            <th>Commission</th>
+                                            <th>Release Date</th>
+                                            <th>Collection Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        <tr>
+                                            <td>4/1/2022</td>
+                                            <td>8000102005</td>
+                                            <td>Jane Doe</td>
+                                            <td>#10001</td>
+                                            <td>Alliance Inc.</td>
+                                            <td>30003</td>
+                                            <td>20%</td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="claim-status-toggle" type="checkbox" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4/1/2022</td>
+                                            <td>8000102005</td>
+                                            <td>Jane Doe</td>
+                                            <td>#10001</td>
+                                            <td>Alliance Inc.</td>
+                                            <td>30003</td>
+                                            <td>20%</td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="claim-status-toggle" type="checkbox" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4/1/2022</td>
+                                            <td>8000102005</td>
+                                            <td>Jane Doe</td>
+                                            <td>#10001</td>
+                                            <td>Alliance Inc.</td>
+                                            <td>30003</td>
+                                            <td>20%</td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="date" type="date" ></td>
+                                            <td><input class="claim-status-toggle" type="checkbox" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
