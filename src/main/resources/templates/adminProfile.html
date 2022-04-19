@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/" xmlns:background-image="(../static/images/alliance-logo.png)">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--style-->
-    <link rel="stylesheet" href="stylesheet.css">
+    <link href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-
+    <link rel="icon" href="../static/images/logo.png" th:href="@{/images/alliance-logo.png}">
     <title>Admin</title>
 </head>
 <body>
 <!--Navbar-->
 <nav class="navbar">
-    <img class="logo" src="C:\Users\dimpy\OneDrive\Desktop\Alliance\claims\Alliance_logo.jpg">
+    <img class="logo" th:src="@{/images/alliance-logo2.jpg}">
     <div class="profile">
-        <img class="profile-image" src="images/admin.png">
+        <img class="profile-image" th:src="@{/images/userimg.png}">
         <p class="profile-name">Admin</p>
         <button id="logout" class="logoutbtn"><span class="fas fa-sign-out-alt"></span></button>
     </div>
@@ -24,18 +24,18 @@
 <!--Sidebar-->
 <input type="checkbox" id="sidebartoggle">
 <label class="side-toggle" for="sidebartoggle">
-        <span class="fas fa-bars"><span>
+        <span class="fas fa-bars"></span>
 </label>
 
 <div class="sidebar" style="background-image: url('sidebarbg.png');">
     <div class="sidebar-menu">
-        <span class="fas fa-home"></span><a href="claimslist.html">Claims List</a>
+        <span class="fas fa-home"></span><a th:href="@{/claimsList/}">Claims List</a>
     </div>
     <div class="sidebar-menu">
-        <span class="fas fa-user"></span><a href="employeelist.html">Employee List</a>
+        <span class="fas fa-user"></span><a th:href="@{/employeeList/}">Employee List</a>
     </div>
     <div class="sidebar-menu">
-        <span class="fas fa-bell"></span><a href="adminprofile.html">Admin Profile</a>
+        <span class="fas fa-bell"></span><a th:href="@{/adminProfile/}">Admin Profile</a>
     </div>
 </div>
 

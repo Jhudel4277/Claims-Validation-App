@@ -288,17 +288,18 @@ main > h2{
 .list-container{
     display: flex;
     align-items: center;
+    overflow-x: visible;
 }
 
 .list-card{
     width: 100%;
     height: auto;
     background-color: #fff;
-    overflow: visible;
+    overflow-x: hidden;
 }
 
 
-/*TOOGLE TABS*/
+/*TOGGLE TABS*/
 .tabs {
     display: flex;
     flex-wrap: wrap;
